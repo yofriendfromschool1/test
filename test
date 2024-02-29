@@ -15,7 +15,7 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 local Window = Library.CreateLib("Zombie Attack script made by dsgdfs", OptTheme)
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
-MainSection:NewToggle("Auto farm enemies", "teleports 2.5 studs behind enemy and auto clicks knife", function(state)
+MainSection:NewToggle("Auto farm", "teleports 2.5 studs behind enemy and auto clicks knife", function(state)
     local function c()
         for n, u in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
             if u.ClassName == "Tool" and u:FindFirstChild("GunController") then
