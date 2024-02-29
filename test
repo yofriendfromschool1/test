@@ -1,3 +1,10 @@
+local function c()
+    for n, u in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+        if u.ClassName == "Tool" and u:FindFirstChild("GunController") then
+            u.Parent = game.Players.LocalPlayer.Character
+        end
+    end
+end
 AutoFarm = true
             game:GetService("RunService").Stepped:connect(
                 function()
