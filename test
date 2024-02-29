@@ -82,4 +82,3 @@ AutoFarm = true
                     wait()
                 end
             end
-        end
