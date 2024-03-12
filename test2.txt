@@ -1047,6 +1047,7 @@ lib.CreateLib = function(name,smth)
 	function toreturn:NewTab(name, icon)
 		lib.AddTab(name,icon)
 	end
+	return toreturn
 end
 return lib
 
