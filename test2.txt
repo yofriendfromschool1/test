@@ -1021,22 +1021,22 @@ function lib.AddTab(name, icon)
 	toreturn.AddSlider = function(name,callback)
 		AddSlider(name,tholder,callback)
 	end
-	toreturn.NewButton = function(Name, text, callback)
+	function toreturn:NewButton(Name, text, callback)
 		AddButton(Name,text,callback,tholder)
 	end
-	toreturn.NewDropdown = function(Name, text, tab, callback)
+	function toreturn:NewDropdown(Name, text, tab, callback)
 		AddDropdown(Name,text,tab,callback,tholder)
 	end
-	toreturn.NewTextBox = function(Name, text, callback)
+	function toreturn:NewTextBox(Name, text, callback)
 		AddInput(Name,text,callback,tholder)
 	end
-	toreturn.NewToggle = function(Name, text, callback)
+	function toreturn:NewToggle(Name, text, callback)
 		AddToggle(Name,text,callback,tholder)
 	end
-	toreturn.NewSection = function(Name)
+	function toreturn:NewSection(Name)
 		return toreturn
 	end
-	toreturn.NewSlider = function(name,callback)
+	function toreturn:NewSlider(name,callback)
 		AddSlider(name,tholder,callback)
 	end
 	return toreturn
