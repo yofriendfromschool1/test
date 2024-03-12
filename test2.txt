@@ -1048,7 +1048,7 @@ lib.CreateLib = function(name,smth)
 		lib.AddTab(name,icon)
 	end
 end
---return lib
+return lib
 
 --[[
 local tab = lib.AddTab("Tabs are over rated")
