@@ -65,9 +65,8 @@ local IsOnMobile = table.find({
 	Enum.Platform.IOS,
 	Enum.Platform.Android
 }, UserInputService:GetPlatform())
-
+local Sky = {}
 if IsOnMobile then
-	local Sky = {}
 	Sky["Ui"] = Instance.new("ScreenGui", gethui())
 	Sky["Ui"].Name = "skyhubtoggle"
 
