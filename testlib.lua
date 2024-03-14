@@ -77,7 +77,7 @@ if IsOnMobile then
 	Sky["DaIcon"].Image = "rbxassetid://12010069146"
 	Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
 	Sky["DaIcon"].MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
+		Sky["DaIcon"].Visible = false
 		for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
 			if v.Name == "skyhub" then
 				v.Frame.Visible = true
