@@ -76,14 +76,6 @@ if IsOnMobile then
 	Sky["DaIcon"].Draggable = true
 	Sky["DaIcon"].Image = "http://www.roblox.com/asset/?id=16710334936"
 	Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
-	Sky["DaIcon"].MouseButton1Click:Connect(function()
-		Sky["DaIcon"].Visible = false
-		for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-			if v.Name == "skyhub" then
-				v.ImageLabel.Visible = true
-			end
-		end
-	end)
 	Sky["das"] = Instance.new("UICorner", Sky["DaIcon"]);
 	Sky["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0);
 	Sky["DaIcon"].Visible = false
