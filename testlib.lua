@@ -78,8 +78,8 @@ if IsOnMobile then
 	Sky["DaIcon"].MouseButton1Click:Connect(function()
 		script.Parent.Visible = false
 		for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-			if v.Name == "Frame" and v.Parent == "ScreenGui" then
-				v.Visible = true
+			if v.Name == "skyhub" then
+				v.Frame.Visible = true
 			end
 		end
 	end)
