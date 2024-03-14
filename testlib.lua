@@ -85,7 +85,6 @@ if game:WaitForChild("CoreGui") then
 else
 	ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 end
-ScreenGui.Name = "skyhub"
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageLabel.Parent = ScreenGui
