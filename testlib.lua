@@ -74,7 +74,7 @@ if IsOnMobile then
 	Sky["DaIcon"].Size = UDim2.new(0,45,0,45)
 	Sky["DaIcon"].Position = UDim2.new(.001,0,0.5,0)
 	Sky["DaIcon"].Draggable = true
-	Sky["DaIcon"].Image = "rbxassetid://12010069146"
+	Sky["DaIcon"].Image = "http://www.roblox.com/asset/?id=16710334936"
 	Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
 	Sky["DaIcon"].MouseButton1Click:Connect(function()
 		Sky["DaIcon"].Visible = false
@@ -803,8 +803,19 @@ local function HLBC_fake_script() -- ImageLabel.Script
 	end)
 	local uis = game:GetService("UserInputService")
 	uis.InputBegan:Connect(function(inp)
-		if inp.KeyCode == Enum.KeyCode.RightControl then
-			visible = true
+		if IsOnMobile then
+			Sky["DaIcon"].MouseButton1Click:Connect(function()
+				Sky["DaIcon"].Visible = false
+				for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+					if v.Name == "skyhub" then
+						visible = true
+					end
+				end
+			end)
+		else
+			if inp.KeyCode == Enum.KeyCode.RightControl then
+				visible = true
+			end
 		end
 	end)
 	task.spawn(function()
