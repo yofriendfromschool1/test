@@ -68,31 +68,10 @@ local IsOnMobile = table.find({
 }, UserInputService:GetPlatform())
 print("FOUND MOBILE")
 print("executing new toggle ui")
-wait(5)
 if IsOnMobile then
-	local Sky = {}
-	Sky["Ui"] = Instance.new("ScreenGui", gethui())
-	Sky["Ui"].Name = "skyhubtoggle"
-
-	Sky["DaIcon"] = Instance.new("ImageButton", Sky["Ui"])
-	Sky["DaIcon"].Size = UDim2.new(0,45,0,45)
-	Sky["DaIcon"].Position = UDim2.new(.001,0,0.5,0)
-	Sky["DaIcon"].Draggable = true
-	Sky["DaIcon"].Image = "rbxassetid://12010069146"
-	Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
-	Sky["DaIcon"].MouseButton1Click:Connect(function()
-		script.Parent.Visible = false
-		for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-			if v.Name == "skyhub" then
-				v.Frame.Visible = true
-			end
-		end
-	end)
-	Sky["das"] = Instance.new("UICorner", Sky["DaIcon"]);
-	Sky["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0);
-	Sky["DaIcon"].Visible = false
+	print("Mobile")
 else
-
+	print("nah")
 end
 print("WTFFF")
 wait(9)
@@ -795,12 +774,7 @@ local function HLBC_fake_script() -- ImageLabel.Script
 	print("MINIMIZE FUNCTION")
 	wait(5)
 	script.Parent.TopBar.Minimize.Activated:Connect(function()
-		if IsOnMobile then
-			Sky["DaIcon"].Visible = true
-    		visible = false
-		else
-			visible = false
-		end
+		visible = false
 	end)
 	print("what")
 	script.Parent.TopBar.Close.Activated:Connect(function()
