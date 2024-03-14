@@ -62,17 +62,7 @@ local Script = Instance.new("Script", ImageLabel)
 Script.Name = "Script"
 print("Finding mobile")
 wait(9)
-local IsOnMobile = table.find({
-	Enum.Platform.IOS,
-	Enum.Platform.Android
-}, UserInputService:GetPlatform())
-print("FOUND MOBILE")
-print("executing new toggle ui")
-if IsOnMobile then
-	print("Mobile")
-else
-	print("nah")
-end
+
 print("WTFFF")
 wait(9)
 --Properties:
