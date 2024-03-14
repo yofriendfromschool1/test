@@ -70,10 +70,6 @@ Sky["DaIcon"].Position = UDim2.new(.001,0,0.5,0)
 Sky["DaIcon"].Draggable = true
 Sky["DaIcon"].Image = "rbxassetid://1352543873"
 Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
-Sky["DaIcon"].MouseButton1Click:Connect(function()
-    script.Parent.Visible = false
-    visible = true
-end)
 Sky["das"] = Instance.new("UICorner", Sky["DaIcon"]);
 Sky["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0);
 Sky["DaIcon"].Visible = false
@@ -775,7 +771,7 @@ local function HLBC_fake_script() -- ImageLabel.Script
 	runService.Heartbeat:Connect(Update)
 	script.Parent.TopBar.Minimize.Activated:Connect(function()
 		Sky["DaIcon"].Visible = true
-    visible = false
+    	visible = false
 	end)
 	script.Parent.TopBar.Close.Activated:Connect(function()
 		close = true
@@ -1181,7 +1177,10 @@ function lib.AddTab(name, icon)
 	toreturn.Source = tholder
 	return toreturn
 end
-
+Sky["DaIcon"].MouseButton1Click:Connect(function()
+    script.Parent.Visible = false
+    visible = true
+end)
 task.spawn(function()
 	while task.wait(0.1) do
 		local currentTime = os.date("*t")
