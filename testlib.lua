@@ -80,7 +80,7 @@ if IsOnMobile then
 		Sky["DaIcon"].Visible = false
 		for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
 			if v.Name == "skyhub" then
-				v.Frame.Visible = true
+				v.ImageLabel.Visible = true
 			end
 		end
 	end)
