@@ -62,19 +62,21 @@ local Script = Instance.new("Script", ImageLabel)
 Script.Name = "Script"
 local Sky = {}
 Sky["Ui"] = Instance.new("ScreenGui", gethui())
-Sky["Ui"].Name = "infiniteyieldIcon"
+Sky["Ui"].Name = "skyhubtoggle"
 
 Sky["DaIcon"] = Instance.new("ImageButton", Sky["Ui"])
 Sky["DaIcon"].Size = UDim2.new(0,45,0,45)
 Sky["DaIcon"].Position = UDim2.new(.001,0,0.5,0)
 Sky["DaIcon"].Draggable = true
-Sky["DaIcon"].Image = "rbxassetid://1352543873"
+Sky["DaIcon"].Image = "rbxassetid://12010069146"
 Sky["DaIcon"].BackgroundColor3 = Color3.fromRGB(17, 36, 66)
 Sky["DaIcon"].MouseButton1Click:Connect(function()
     script.Parent.Visible = false
-    for i,v in pairs(game:GetService("CoreGui"):GetDescendants())
+    for i,v in pairs(game:GetService("CoreGui"):GetDescendants()) do
 		if v.Name == "Frame" and v.Parent == "ScreenGui" then
 			v.Visible = true
+		end
+	end
 end)
 Sky["das"] = Instance.new("UICorner", Sky["DaIcon"]);
 Sky["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0);
