@@ -60,10 +60,15 @@ local TempTab = Instance.new("ScrollingFrame")
 local UIGridLayout_3 = Instance.new("UIGridLayout")
 local Script = Instance.new("Script", ImageLabel)
 Script.Name = "Script"
+print("Finding mobile")
+wait(9)
 local IsOnMobile = table.find({
 	Enum.Platform.IOS,
 	Enum.Platform.Android
 }, UserInputService:GetPlatform())
+print("FOUND MOBILE")
+print("executing new toggle ui")
+wait(5)
 if IsOnMobile then
 	local Sky = {}
 	Sky["Ui"] = Instance.new("ScreenGui", gethui())
@@ -89,6 +94,8 @@ if IsOnMobile then
 else
 
 end
+print("WTFFF")
+wait(9)
 --Properties:
 if game:WaitForChild("CoreGui") then
 	if cloneref then
@@ -785,6 +792,8 @@ local function HLBC_fake_script() -- ImageLabel.Script
 	end)
 	
 	runService.Heartbeat:Connect(Update)
+	print("MINIMIZE FUNCTION")
+	wait(5)
 	script.Parent.TopBar.Minimize.Activated:Connect(function()
 		if IsOnMobile then
 			Sky["DaIcon"].Visible = true
@@ -793,6 +802,7 @@ local function HLBC_fake_script() -- ImageLabel.Script
 			visible = false
 		end
 	end)
+	print("what")
 	script.Parent.TopBar.Close.Activated:Connect(function()
 		close = true
 		script.Parent.Parent:Destroy()
