@@ -64,7 +64,7 @@ local Sky = {}
 Sky["Ui"] = Instance.new("ScreenGui", gethui())
 Sky["Ui"].Name = "infiniteyieldIcon"
 
-Sky["DaIcon"] = Instance.new("ImageButton", DELTA["Ui"])
+Sky["DaIcon"] = Instance.new("ImageButton", Sky["Ui"])
 Sky["DaIcon"].Size = UDim2.new(0,45,0,45)
 Sky["DaIcon"].Position = UDim2.new(.001,0,0.5,0)
 Sky["DaIcon"].Draggable = true
